@@ -15,7 +15,9 @@ function App() {
       </div>
       </header>
       <div className='PostColumns'>
-        aaaaaaaaaaa
+        <div className='BoxTitulo'>
+        <h1 className="Titulo">Tablero</h1>
+        </div>
       </div>
     </div>
   );

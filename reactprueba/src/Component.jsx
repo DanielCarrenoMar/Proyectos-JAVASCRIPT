@@ -5,7 +5,7 @@ export function Icon({name, icon, size, heigth, link, image}) {
         if (image == null) {
             return(
                 <div className="Icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" height={heigth} viewBox={`0 0 280 ${size}`} focusable="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" height={heigth} viewBox={`0 0 280 ${size}`} focusable="false" >
                         <path d={icon}></path>
                     </svg>
                 </div>
