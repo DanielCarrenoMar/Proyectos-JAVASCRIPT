@@ -1,37 +1,22 @@
-import logo from './logo.svg';
+import image from './Images/ucab_logo.png';
 import './App.css';
 import { pathImage } from './Path';
 import {Icon} from './Component';
 
-/*
-function App2() {
-
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Incrediable
-        </p>
-        <Button name="Cambio de color" />
-        <Tabla users={users} />
-      </header>
-    </div>
-  );
-}
-*/
 function App() {
   return (
     <div>
       <header>
-
       <div className="Columns">
+        <img src={image} className="Logo"/>
         {pathImage.map((item, index) => (
-        <Icon key={index} name={item.name} icon={item.path} size={item.size} link={item.link} />
+        <Icon key={index} name={item.name} icon={item.path} size={item.size} link={item.link} image={item.image} />
         ))}
       </div>
-      
       </header>
+      <div className='PostColumns'>
+        aaaaaaaaaaa
+      </div>
     </div>
   );
 }
