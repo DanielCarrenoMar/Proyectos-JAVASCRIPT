@@ -1,0 +1,56 @@
+---
+import { MenuItems } from '../../public/Menuitems';
+
+interface Props {
+    select: string;
+}
+
+const { select } = Astro.props;
+const negro= '#0374B5';
+const blanco = '#FFFFFF';
+---
+
+<img  class="justify-items-center object-cover w-full h-auto py-2" src="/ucab.png" alt=" UCAB">
+
+<div class={select === `1` ? 'bg-white' : ''}>
+    <img class="h-13 rounded-full border-2 'border-white" src="/cuenta.png" alt="Cuenta">
+</div>
+
+{MenuItems.map((item, index) => (
+    <div class={select === `${index+2}` ? 'bg-white' : ''}>
+        <svg fill={select === '2' ? negro : blanco} class={`h-${item.heigth}`} viewBox={item.vb}>
+            <path d={item.d}></path>
+        </svg>
+    </div>
+))}
+
+<div>
+    <img class="h-10" src="/cursos.svg" alt="Cursos">
+</div>
+<div>
+    <img class="h-8" src="/grupos.svg" alt="Grupos">
+</div>
+<div>
+    <img class="h-10" src="/calendario.svg" alt="Calendario">
+</div>
+<div>
+    <img class="h-10" src="/bandeja.svg" alt="Bandeja">
+</div>
+<div>
+    <img class="h-10" src="/ayuda.svg" alt="Ayuda">
+</div>
+
+<style>
+    div {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+    }
+    div:hover {
+        background-color: #2E3C46;
+    }
+</style>
