@@ -21,13 +21,13 @@ const { title, sele } = Astro.props;
 	</head>
 	<body>
 		<div class="flex">
-			<div class="flex-none w-18 h-screen text-white bg-[#394B58] ">
+			<div class="flex-none w-18 h-screen text-white bg-[#394B58]">
 				<Menu select={sele}/>
 			</div>
-			<div class="flex-initial w-full">
+			<div id="Desplegable" class="flex-none absolute bg-white left-[5.3rem] w-1/3 h-full shadow-xl p-5">
 				a
 			</div>
-			<div class="flex-initial w-full">
+			<div class="flex-1 w-full">
 				<slot />
 			</div>
 		</div>
