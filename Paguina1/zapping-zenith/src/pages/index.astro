@@ -4,7 +4,14 @@ import Card from '../components/Card.astro';
 ---
 
 <Layout title="Tablero DANIEL" sele='2'>
-	<main>
-		<h1>Tablero</h1>
+	<main class="flex-1 w-full h-full">
+		<div class="h-auto min-h-[4.5rem]">
+			<h1 class="font-normal text-[1.8rem] pt-3 pl-6">Tablero</h1>
+		</div>
+		<div class="flex-initial h-full bg-slate-400">
+			<Card/>
+			<Card/>
+			<Card/>
+		</div>
 	</main>
 </Layout>

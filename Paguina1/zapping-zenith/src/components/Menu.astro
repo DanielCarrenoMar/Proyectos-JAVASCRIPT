@@ -24,7 +24,7 @@ const blanco = '#FFFFFF';
 {MenuItems.map((item, index) => (
     <a href={item.title} class="group">
         <div class={select === `${index+2}` ? 'bg-white Item' : 'hover:bg-[#2E3C46] Item'}>
-            <svg fill={select === `${index+2}` ? negro : blanco} class={`h-`+item.heigth} viewBox={item.vb}>
+            <svg fill={select === `${index+2}` ? negro : blanco} class="h-8" viewBox={item.vb}>
                 <path d={item.d}></path>
             </svg>
             <div class={select === `${index+2}` ? 'invisible z-[-1] h-11 w-[6.5rem] absolute' : 'flex items-center justify-center object-cover invisible z-[-1] h-11 w-[6.5rem] absolute delay-150 rounded-lg font-semibold text-lg bg-[#0575B6] transition-Item group-hover:visible group-hover:translate-x-[7rem]'}>
