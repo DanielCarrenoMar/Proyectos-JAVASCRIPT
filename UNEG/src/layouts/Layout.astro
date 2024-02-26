@@ -1,0 +1,51 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" /> <!-- Codificacion de la paguina -->
+		<meta name="description" content="Paguina de prueba usando Astro" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="robots" content="index, follow" />
+		<meta name="theme-color" content="#000000" />
+		<link rel="icon" type="image/svg+xml" href="/logo.ico" />
+
+		<!-- Open Graph -->
+
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<header class="container flex items-baseline justify-between mx-auto px-6 pt-6">
+			<div class="flex h-20 justify-start">
+				<img src="/head.jpg" alt="UNEG">
+			</div>
+			<nav class="flex space-x-14 justify-end translate-y-[-18px]">
+				<button >Institucion</button>
+				<button >Academia</button>
+				<button >Publicaciones</button>
+				<button >Sistemas en Línea</button>
+				<a title="Correo Institucional" class="w-6 flex" target="_blank" href="https://mail.uneg.edu.ve">
+					<svg class="fill-blue-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+						<path d="M256 352c-16.53 0-33.06-5.422-47.16-16.41L0 173.2V400C0 426.5 21.49 448 48 448h416c26.51 0 48-21.49 48-48V173.2l-208.8 162.5C289.1 346.6 272.5 352 256 352zM16.29 145.3l212.2 165.1c16.19 12.6 38.87 12.6 55.06 0l212.2-165.1C505.1 137.3 512 125 512 112C512 85.49 490.5 64 464 64h-416C21.49 64 0 85.49 0 112C0 125 6.01 137.3 16.29 145.3z"></path>
+					</svg>
+				</a>
+			</nav>
+		</header>
+		<slot />
+	</body>
+</html>
+<style>
+	button {
+		font-size: 16px;
+		line-height: 1.1;
+		color: rgb(22, 64, 127);
+		font-weight: 900;
+	}
+</style>
