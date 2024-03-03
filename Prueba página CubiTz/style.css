@@ -1,0 +1,99 @@
+body{
+  background-color: #F4F4FE;
+  scrollbar-color: blue;
+  max-width: 45rem;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Onest Variable,system-ui,sans-serif;
+}
+section{
+  padding-top: 40px;
+}
+
+.title > p, nav{
+  font-size: larger;
+}
+.title > p{
+  padding-top: 10px;
+  max-width: 35rem;
+}
+h2{
+  font-size: xx-large;
+
+}
+.pContainer{
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+.pCard{
+  width: 100%;
+  height: 250px;
+  display: flex;
+  column-gap: 40px;
+}
+.pImageContainer{
+  
+  width: 35%;
+  object-fit: cover;
+}
+.pImage{
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px rgb(195, 195, 195);
+}
+h3{
+  font-size: larger;
+  margin-top: 5px;
+}
+.pTextContainer{
+  display: flex;
+  flex-direction: column;
+}
+.pTextContainer > div{
+  flex: auto;
+}
+.pTextContainer > p{
+  color: rgb(66, 66, 66);
+}
+button {
+    background: black;
+    cursor: pointer;
+    border: none;
+    padding: 12px 24px;
+    color: azure;
+    font-size: 14px;
+    font-weight: bold;
+    position: relative;
+    border-radius: 12px;
+    align-self: flex-start;
+}
+button:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, red, blue, deeppink, blue, red, blue, deeppink, blue);
+    background-size: 800%;
+    border-radius: 12px;
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+}
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+footer{
+  padding-top: 100px;
+}
